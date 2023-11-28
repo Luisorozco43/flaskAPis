@@ -12,6 +12,7 @@ app = Flask(__name__)
 app.debug = True
 
 connection_string: str = os.environ.get("CONNECTION_STRING")
+print(f"Connection String: {connection_string}")
 connection_string = connection_string
 
 if not connection_string:
