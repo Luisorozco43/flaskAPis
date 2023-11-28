@@ -8,7 +8,7 @@ import os
 
 load_dotenv()
 
-app = flask(__name__)
+app = Flask(__name__)
 app.debug = True
 connection_string = "mongodb+srv://loroz:Luisito1234@ecobill-cluster.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000"
 app.config["MONGO_URI"] = connection_string
