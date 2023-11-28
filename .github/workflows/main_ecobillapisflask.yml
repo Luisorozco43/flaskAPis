@@ -65,3 +65,4 @@ jobs:
           app-name: 'ecobillApisFlask'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9F321B43A0984A278B74E51CA32E9A01 }}
+          other-secret: ${{ secrets.CONNECTION_STRING }}
