@@ -10,9 +10,13 @@ load_dotenv()
 
 app = Flask(__name__)
 app.debug = True
-connection_string = "mongodb+srv://loroz:Luisito1234@ecobill-cluster.mongocluster.cosmos.azure.com/test?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000"
+
+connection_string: str = os.environ.get("CONNECTION_STRING")
+connection_string = connection_string
+
 if not connection_string:
     raise ValueError("MongoDB connection string not found in environment variables")
+
 app.config["MONGO_URI"] = connection_string
 
 
